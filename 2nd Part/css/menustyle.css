@@ -1,0 +1,228 @@
+.navbar .navbar-toggler .side-bar-toggler {
+    left: 1rem;
+}
+
+.profile-btn {
+    border: none;
+    background: none;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+}
+
+.notification-button {
+    background: none;
+    border: none;
+}
+.notification-button:hover{
+    background: none;
+}
+
+.notification {
+    color: white;
+}
+
+.notification:hover {
+    color: blueviolet;
+}
+
+
+#sidebar-menu {
+    box-shadow: 0px 0px 3px;
+}
+
+.side-sticky {
+    position: sticky;
+}
+
+.side-bar-logo {
+    color: black;
+}
+
+.items li,
+.items .list{
+    list-style: none;
+    padding: 15px 0;
+}
+
+.items li i ,
+.items .list i {
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+.items li a,
+.items .list a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.items .list a:hover{
+    color: white;
+}
+
+.items li:hover,
+.items .list:hover{
+    background: rgb(16, 26, 50);
+    cursor: pointer;
+}
+
+.items li:nth-child(1) {
+    border-left: 4px solid;
+}
+
+.details{
+    display: grid;
+    justify-content: end;
+    margin-right: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotateX(-180deg);
+    transform-origin: top center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 0.8s transform ease;
+}
+
+.list:hover .details{
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    transform: rotateX(0deg);
+    transition: 0.8s transform ease;
+}
+
+.breadcrumb {
+    box-shadow: 0px 0px 8px;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.table-deck {
+    margin-bottom: 2rem;
+}
+
+.menu-table {
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 600px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.table-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    text-shadow: 0px 2px 4px black;
+}
+
+.table-head-row {
+    background-color: rgb(249, 248, 253);
+}
+
+.menu-table-card{
+    border: none;
+}
+.menu-table-body {
+    border: none;
+}
+
+.user-profile {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.table-btn {
+
+}

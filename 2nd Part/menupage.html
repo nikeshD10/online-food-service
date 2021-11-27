@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/menustyle.css">
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler side-bar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo" href="#"><img src="Logo/imageedit_3_8950973200.png" alt="logo"></a>
+        <button class="navbar-toggler flex-row" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse nav-elements flex-row" id="navbarToggler">
+            <form class="form-inline mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control navbar-nav" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="submit" id="button-addon2">
+                            <i class="fas fa-search fa-1x"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 flex-row">
+                <li class="nav-item my-2 dropdown">
+                    <a class="btn notification-button" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                        <i class="far fa-bell fa-2x notification"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <a class="btn profile-btn" type="button">
+                            <img src="images/linkedin_profile_picture_tips-1.jpg" alt="profile" class="profile">
+                        </a>
+                        <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" data-reference="parent" >
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Sign out</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar-menu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse show">
+                <div class="side-sticky sticky-top">
+                    <ul class="nav flex-column items">
+                        <li>
+                            <i class="fas fa-chart-line fa-1x side-bar-logo"></i>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <hr class="dropdown-divider" style="border-color: #253047" >
+                        <li>
+                            <i class="fas fa-user fa-1x side-bar-logo"></i>
+                            <a href="#">Restaurant Profile</a>
+                        </li>
+                        <li class="list">
+                            <i class="fas fa-users fa-1x side-bar-logo"></i>
+                            <a href="#">
+                                Orders
+                            </a>
+                            <div class="details">
+                                <ul>
+                                    <li><a href="#" class="user-btn" role="button">New Order</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Preparing</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Ready Order</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Past Order</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <i class="fas fa-sort-amount-up fa-1x side-bar-logo"></i>
+                            <a href="#">Menu</a>
+                            <div class="details">
+                                <ul>
+                                    <li><a href="#" class="user-btn" role="button">Menu Items</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Menu Editor</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-hamburger fa-1x side-bar-logo"></i>
+                            <a href="#">Contact US</a>
+                        </li>
+
+                        <hr class="dropdown-divider" style="border-color: #253047" >
+                        <li class="list">
+                            <i class="fas fa-user-cog fa-1x side-bar-logo"></i>
+                            <a href="#">
+                                Account Settings
+                            </a>
+                            <div class="details">
+                                <ul>
+                                    <li><a href="#" class="user-btn" role="button">Edit Profile</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Change Password</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Delete Account</a></li>
+                                    <li><a href="#" class="user-btn" role="button">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="col-md-9 col-lg-10">
+                <nav class="nav-breadcrumb sticky-top mx-0" style="z-index: 1">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Home / Dashboard</li>
+                    </ol>
+                </nav>
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-deck table-deck">
+                                    <div class="card menu-table-card">
+                                        <div class="card-body menu-table-body">
+                                            <h2 style="text-align: center">Menu List</h2>
+                                            <hr>
+                                            <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar menu-table">
+                                                <table class="table table-borderless table-light">
+                                                    <thead class="sticky-top">
+                                                        <tr class="table-head-row">
+                                                            <th scope="col">Menu Name</th>
+                                                            <th scope="col">Available Status</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Edit</th>
+                                                            <th scope="col">Delete</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <button class="btn btn-secondary add-btn btn-block" type="button">Add Menu</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card menu-type-table-card">
+                                        <div class="card-body menu-table-body">
+                                            <h2 style="text-align: center">Menu Types</h2>
+                                            <hr>
+                                            <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar menu-table">
+                                                <table class="table table-borderless table-light">
+                                                    <thead class="sticky-top">
+                                                        <tr class="table-head-row">
+                                                            <th scope="col">Menu Name</th>
+                                                            <th scope="col">Available Status</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Edit</th>
+                                                            <th scope="col">Delete</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Services%20Images/Pizza.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Home%20page%20Img/mac-menu.png" alt="" class="user-profile">
+                                                                Pizza
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>$12</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-info">Description</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-warning">Edit</button>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <button class="btn btn-secondary add-btn btn-block" type="button">Add More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+<script src="vendor/components/jquery/jquery.js"></script>
+<script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
